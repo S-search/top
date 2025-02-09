@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Search</title>
+    <link rel="icon" href="favicon.ico">
+</head>
+<style>
+    html{
+        font-family: Arial;
+    }
+    #searchbox{
+        width: 50%;
+        height: 40px;
+        border-radius: 16px;
+        box-shadow: 0 0 3px gray;
+        border: none;
+        outline: none;
+        text-indent: 1em;
+        font-size:  110%;
+        margin-top: 125px;
+    }
+    button{
+        background-color: white;
+        border: none;
+        width: 100px;
+        height: 25px;
+        margin-top: 10px;;
+        transition: all 0.25s;
+        box-shadow: 0 0 3px gray;
+    }
+    button:hover {
+        background-color: rgb(245, 242, 242);
+    }
+    #remove{
+        background-color: white;
+        width: 25px;
+        border-radius: 14px;
+        border-color: black;
+        box-shadow: 0 0 3px gray;
+    }
+    select{
+        width: 202px;
+        height: 25px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 5px;
+        border: none;
+        background-color: #f1eeee;
+        outline: none;
+        border-radius: 0px; 
+        margin-top: 20px;
+    }
+    option{
+        background-color: white;
+    }
+    summary{
+        list-style: none;
+        height: 25px;
+        width: 310px;
+        border-radius: 16px;
+    }
+    summary:hover{
+        background-color: rgb(245, 242, 242);
+    }
+    #summary1{
+        margin-top: 125px;
+    }
+    #summary2{
+        margin-top: 10px;
+    }
+    @media (max-width: 700px){
+        #searchbox{
+            width: 80%;
+            height: 30px;
+        }
+    }
+</style>
+<script>
+    function search_g(){
+        var word = searchbox.value;
+        window.open(`https://www.google.com/search?q=${word}`);
+    }
+    function search_e(){
+        var word = searchbox.value;
+        window.open(`https://www.ecosia.org/search?method=index&q=${word}`);
+    }
+    function search_b(){
+        var word = searchbox.value;
+        window.open(`https://www.bing.com/search?q=${word}`);
+    }
+    function search_s(){
+        var word = searchbox.value;
+        var value1 = select_list.value;
+        window.open(`${value1}${word}`);
+    }
+    function remove(){
+        var nothing = "";
+        searchbox.value = nothing;
+    }
+    </script>
+<body>
+    <h1>Super Search</h1>
+    <h3>Everything search from here.</h3>
+    <div id="area_search">
+        <center>
+        <input type="text" id="searchbox">
+        <button type="button" id="remove" onclick="remove()">&times;</button>
+        <br>
+        <br>
+        <button id="g_search" onclick="search_g()">Google</button>
+        <button id="g_search" onclick="search_e()">Ecosia</button>
+        <button id="g_search" onclick="search_b()">Bing</button>
+        <br>
+        <select id="select_list">
+            <option label="&ensp;&ensp;動画-Youtube" value="https://www.youtube.com/results?search_query="></option>
+            <option label="&ensp;&ensp;翻訳-DeepL" value="https://www.deepl.com/ja/translator#ja/en/"></option>
+            <option label="&ensp;&ensp;地図-Google Map&ensp;" value="https://www.google.co.jp/maps/search/"></option>
+        </select>
+        <button onclick="search_s()">で調べる</button>
+        </center>
+    </div>
+    <br>
+    <center>
+        <details id="summary1">
+            <summary>Links</summary>
+            <button onclick=location.href="https://www.google.com">Go to Google</button>
+            <button onclick=location.href="https://www.ecosia.org">Go to Ecosia</button>
+            <button onclick=location.href="https://www.bing.com">Go to Bing</button>
+        </details>
+        <details>
+            <summary id="summary2">Licence</summary>
+            This page is made by Miyabi. <br>You can use free!<br>Ver1.0.1
+        </details>
+    </center>
+</body>
+</html>
