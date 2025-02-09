@@ -109,9 +109,9 @@
 <body>
     <h1>Super Search</h1>
     <h3>Everything search from here.</h3>
-    <p>It changed</p>
     <div id="area_search">
         <center>
+        <label>
         <input type="text" id="searchbox">
         <button type="button" id="remove" onclick="remove()">&times;</button>
         <br>
@@ -119,13 +119,16 @@
         <button id="g_search" onclick="search_g()">Google</button>
         <button id="g_search" onclick="search_e()">Ecosia</button>
         <button id="g_search" onclick="search_b()">Bing</button>
+        </label>
         <br>
         <select id="select_list">
+            <label>
             <option label="&ensp;&ensp;動画-Youtube" value="https://www.youtube.com/results?search_query="></option>
             <option label="&ensp;&ensp;翻訳-DeepL" value="https://www.deepl.com/ja/translator#ja/en/"></option>
             <option label="&ensp;&ensp;地図-Google Map&ensp;" value="https://www.google.co.jp/maps/search/"></option>
         </select>
         <button onclick="search_s()">で調べる</button>
+            </label>
         </center>
     </div>
     <br>
