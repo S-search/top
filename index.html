@@ -44,7 +44,7 @@
         box-shadow: 0 0 3px gray;
         margin-top: 125px;
     }
-    #s_list{
+    select{
         width: 203px;
         height: 25px;
         -webkit-appearance: none;
@@ -102,7 +102,7 @@
     }
     function search_s(){
         var word = searchbox.value;
-        var value1 = s_list.value;
+        var value1 = select.value;
         window.open(`${value1}${word}`);
     }
     function remove(){
@@ -126,8 +126,8 @@
         </label>
         <br>
             <span id="no_o">
-        <select id="s_list">
-            <option label="&ensp;&ensp;動画-Youtube" value="https://www.youtube.com/results?search_query="></option>
+        <select>
+            <option value="https://www.youtube.com/results?search_query=">&ensp;&ensp;動画-Youtube</option>
             <option label="&ensp;&ensp;翻訳-DeepL" value="https://www.deepl.com/ja/translator#ja/en/"></option>
             <option label="&ensp;&ensp;地図-Google Map&ensp;" value="https://www.google.co.jp/maps/search/"></option>
         </select>
