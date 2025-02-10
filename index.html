@@ -102,7 +102,7 @@
     }
     function search_s(){
         var word = searchbox.value;
-        var value1 = select.value;
+        var value1 = s_1.value;
         window.open(`${value1}${word}`);
     }
     function remove(){
@@ -126,7 +126,7 @@
         </label>
         <label>
         <br>
-        <select arealabel="s_list">
+        <select arealabel="s_list" id="s_1">
             <option value="https://www.youtube.com/results?search_query=">&ensp;&ensp;動画-Youtube</option>
             <option label="&ensp;&ensp;翻訳-DeepL" value="https://www.deepl.com/ja/translator#ja/en/"></option>
             <option label="&ensp;&ensp;地図-Google Map&ensp;" value="https://www.google.co.jp/maps/search/"></option>
