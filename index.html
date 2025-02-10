@@ -62,6 +62,8 @@
     option{
         background-color: white;
     }
+    #no_o{
+        white-space: nowrap;
     summary{
         list-style: none;
         height: 25px;
@@ -123,16 +125,16 @@
         </label>
         <br>
         <label>
+            <span id="no_o">
         <select id="s_list">
             <option label="&ensp;&ensp;動画-Youtube" value="https://www.youtube.com/results?search_query="></option>
             <option label="&ensp;&ensp;翻訳-DeepL" value="https://www.deepl.com/ja/translator#ja/en/"></option>
             <option label="&ensp;&ensp;地図-Google Map&ensp;" value="https://www.google.co.jp/maps/search/"></option>
         </select>
-            </center>
-        <center>
             <button onclick="search_s()">で調べる</button>
-        </center>
+            </span>
         </label>
+        </center>
     </div>
     <center>
         <details id="summary1">
